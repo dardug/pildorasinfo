@@ -1,0 +1,40 @@
+<html>
+	<body>
+	<h1>
+	Hola alumnos estamos viendo nuestra primera plantilla
+	</h1>
+
+	{% if nombre_persona == 'Dardo' %}
+
+	<p><strong>El curso lo imparte el profesor titular<strong></p>
+
+	{% else %}
+
+	<p><strong>El curson lo imparte el profesor suplente<strong></p>
+
+
+	{% endif %}
+
+
+	<p>El nombre de la persona es:{{nombre_persona|lower}} {{apellido_persona.upper}}<p>
+	<p>Estamos viendo el tema de las plantillas a dia tal: {{momento_actual.day}}/{{momento_actual.month}}/{{momento_actual.year}}<p>
+	<p><strong>Temas del curso:<strong><p>
+	</body>
+	</htlm>
+	<p>
+		<ul>
+		{% if temas %}
+			{% for elto in temas %}
+
+				<li>{{elto|first|upper}}</li>
+
+			{% endfor %}
+		
+		{% else %}
+			<p><strong>No hay elementos que mostrar<strong><p>
+		{% endif %}.
+		</ul>
+
+	<p>
+
+
